@@ -2,10 +2,10 @@
 
 For the convenient of customizing the Metric, ``armitage`` patch
 the ``mmengine.evaluator.Evaluator`` with the local ``Evaluator`` Thanks to
-this, the Metric in mmengine-template only needs to implement the ``add`` and
+this, the Metric in armitage only needs to implement the ``add`` and
 ``compute_metric``.
 
-Warning:
+.. warning::
     If there is a need to customize the Evaluator for more complicated evaluate
     process. The methods defined in ``CustomEvaluator`` must call
     ``metric.compute`` and ``metric.add`` rather than ``metric.process`` and
