@@ -1,3 +1,88 @@
+# Copyright 2023 evdcush
+"""
+Registry
+========
+The registry in MMEngine supports hierarchical registration, which enables
+cross-project calls, meaning that modules from one project can be used in
+another project. Though there are other ways to implement this, the registry
+provides a much easier solution.
+
+To easily make cross-library calls, MMEngine provides twenty two root
+registries, including:
+
+:``RUNNERS``:
+    The registry for Runner.
+
+:``RUNNER_CONSTRUCTORS``:
+    The constructors for Runner.
+
+:``LOOPS``:
+    Manages training, validation and testing processes, such as
+    EpochBasedTrainLoop.
+
+:``HOOKS``: the hooks, such as CheckpointHook, and ParamSchedulerHook.
+
+:``DATASETS``: the datasets.
+
+:``DATA_SAMPLERS``:
+    Sampler of DataLoader, used to sample the data.
+
+:``TRANSFORMS``:
+    Various data preprocessing methods, such as Resize, and Reshape.
+
+:``MODELS``:
+    Various modules of the model.
+
+:``MODEL_WRAPPERS``:
+    Model wrappers for parallelizing distributed data, such as
+    MMDistributedDataParallel.
+
+:``WEIGHT_INITIALIZERS``:
+    The tools for weight initialization.
+
+:``OPTIMIZERS``:
+    Registers all Optimizers and custom Optimizers in PyTorch.
+
+:``OPTIM_WRAPPER``:
+    The wrapper for Optimizer-related operations such as
+    OptimWrapper, and AmpOptimWrapper.
+
+:``OPTIM_WRAPPER_CONSTRUCTORS``:
+    The constructors for optimizer wrappers.
+
+:``PARAM_SCHEDULERS``:
+    Various parameter schedulers, such as MultiStepLR.
+
+:``METRICS``:
+    The evaluation metrics for computing model accuracy, such as Accuracy.
+
+:``EVALUATOR``:
+    One or more evaluation metrics used to calculate the model accuracy.
+
+:``TASK_UTILS``:
+    The task-intensive components, such as AnchorGenerator, and BboxCoder.
+
+:``VISUALIZERS``:
+    The management drawing module that draws prediction boxes on
+    images, such as DetVisualizer.
+
+:``VISBACKENDS``:
+    The backend for storing training logs, such as LocalVisBackend,
+    and TensorboardVisBackend.
+
+:``LOG_PROCESSORS``:
+    Controls the log statistics window and statistics methods, by
+    default we use LogProcessor.
+    You may customize LogProcessor if you have special needs.
+
+:``FUNCTIONS``:
+    Registers various functions, such as collate_fn in DataLoader.
+
+:``INFERENCERS``:
+    Registers inferencers of different tasks, such as DetInferencer,
+    which is used to perform inference on the detection task.
+
+"""
 from mmengine.registry import DATASETS as MMENGINE_DATASETS
 from mmengine.registry import EVALUATOR as MMENGINE_EVALUATOR
 from mmengine.registry import HOOKS as MMENGINE_HOOKS
