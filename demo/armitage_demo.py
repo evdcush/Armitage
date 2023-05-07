@@ -1,3 +1,37 @@
+"""
++-------+
+|Config |
++-------+-----------+
+|                   |
+| model             |
+| train_dataloader  |
+|   dataset         |
+|   sampler         |
+| train_cfg         |
+| optim_wrapper     |
+|   optimizer       |
+| param_scheduler   |
+| val_dataloader    |
+|   dataset         |
+|   sampler         |
+| val_cfg           |
+| val_evaluator     |
+| default_hooks     |
+| launcher          |
+| env_cfg           |
+|   backend         |
+|   mp_cfg          |
+| log_level         |
+| load_from         |
+| resume            |
+|                   |
++-------------------+
+
+- Build Runner from config
+- Run
+
+"""
+
 from argparse import ArgumentParser
 
 from mmengine.registry import DefaultScope

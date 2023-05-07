@@ -20,9 +20,9 @@ registries, including:
     Manages training, validation and testing processes, such as
     EpochBasedTrainLoop.
 
-:``HOOKS``: the hooks, such as CheckpointHook, and ParamSchedulerHook.
+:``HOOKS``: The hooks, such as CheckpointHook, and ParamSchedulerHook.
 
-:``DATASETS``: the datasets.
+:``DATASETS``: The datasets.
 
 :``DATA_SAMPLERS``:
     Sampler of DataLoader, used to sample the data.
