@@ -34,11 +34,8 @@ Assumes data is stored in the following path::
     │   ├── ...
 
 
-
-
-
-
 """
+import cv2
 import torch
 
 from mmengine import load
