@@ -1,6 +1,10 @@
 ========
 Armitage
 ========
+Respite.
+
+Built from:
+https://github.com/open-mmlab/mmengine-template
 
 Directory Structure
 ===================
