@@ -1,0 +1,7 @@
+albumentations
+'ray[tune]'
+wandb
+
+mmdet
+mmpretrain
+mmagic
